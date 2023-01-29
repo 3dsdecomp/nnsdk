@@ -44,14 +44,6 @@ file(GLOB_RECURSE cxxsourcefiles "Source/*.cpp")
 
 add_library(nnsdk ${csourcefiles} ${cxxsourcefiles})
 
-target_link_options(nnsdk PUBLIC
-    --cpu=MPCore --entry=__ctr_start --startup=__ctr_start --library_type=standardlib
-    --ref_cpp_init --scanlib --legacyalign
-    --tailreorder --no_remove --datacompressor=off --arm_only
-    --inline 
-    --verbose --mangled --symbols --paged
-    )
-
 target_compile_options(nnsdk PUBLIC $<$<COMPILE_LANGUAGE:CXX>:
     --apcs=//interwork --cpu=MPCore --fpmode=fast --cpp --arm --force_new_nothrow
     --signed_chars --multibyte-chars --locale=japanese --no_vfe # workaround, vfe should be enabled
