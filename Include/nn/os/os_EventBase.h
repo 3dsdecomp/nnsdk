@@ -1,5 +1,5 @@
 #pragma once
-#include "os_InterruptEvent.h"
+#include "nn/os/os_InterruptEvent.h"
 
 namespace nn {
 namespace os {

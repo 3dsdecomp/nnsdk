@@ -1,5 +1,5 @@
 #pragma once
-#include "os_WaitObject.h"
+#include "nn/os/os_WaitObject.h"
 
 namespace nn {
 namespace os {
