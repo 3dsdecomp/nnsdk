@@ -5,9 +5,9 @@
 namespace nn {
 
 struct Handle {
-    u32 value;
+    u32 m_Handle;
     Handle()
-        : value(0)
+        : m_Handle(0)
     {
     }
 };
