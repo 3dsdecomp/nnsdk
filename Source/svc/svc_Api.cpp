@@ -109,7 +109,7 @@ namespace svc {
     __asm nn::Result __attribute__((section("i._ZN2nn3svc20WaitSynchronizationNEPiPKNS_6HandleEibx"))) WaitSynchronizationN(int* out, const nn::Handle* handles, s32 handleCount, bool waitAll, s64 timeout_ns)
     {
         push {r0, r4}
-        ldr r0, [sp, #4]
+        ldr r0, [sp, #8]
         ldr r4, [sp, #0xC]
         svc 0x25
         ldr r2, [sp]
